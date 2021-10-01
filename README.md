@@ -37,7 +37,7 @@ repo name followd by OS it successfully builds on with or without the vpn/tacc n
 - tapis-cmd: linux, macOS with and without VPN
 - tapis-apps: linux, macOS with and without VPN
 - tapis-files: linux, macOS with and without VPN
-- !!tapis-java: linux, macOS ONLY WITH VPN CURRENTLY!!
+- !!tapis-java: linux, macOS ONLY WITH VPN CURRENTLY FAILS OFF VPN on securitylib!!
 - tapis-meta: linux, macOS ONLY WITH VPN CURRENTLY
 - notifications: linux, macOS ONLY WITH VPN CURRENTLY
 - !!metav3-RH4-core: **FAILS** WITH Source option 5 is no longer supported. Use 7 or later.!!
@@ -49,4 +49,8 @@ repo name followd by OS it successfully builds on with or without the vpn/tacc n
 - !!tapis-vault-java-driver: **FAILS** ON MISSING POM, USES GRADLE, **DEPRECATED**!! 
 - client-demo-java: linux, macOS ONLY WITH VPN CURRENTLY, **DEPRECATED**
 
-
+##### Current Hold-ups
+Currently off the VPN the repos are building very slowly. I believe that this is happening because the dowloads from 
+c002.rodeo.tacc.utexas.edu are timing out and then retrying. In contrast when on the VPN if any timeout or interruption
+happens with c002.rodeo.tacc.utexas.edu it will wait to attempt again until a snapshot or release update is specifically
+stated. Both when on the vpn and off I can ping to c002.rodeo.tacc.utexas.edu but when off the VPN it takes on average twice as long.
