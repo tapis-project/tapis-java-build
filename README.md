@@ -16,7 +16,7 @@ macOS:
 Windows:
 DON'T HAVE WINDOWS EXECUTABLE TO USE FOR virtualBox VM
 
-### Running
+## Running
 1. clone this repo in same directory as other tapis repos
 2.  - IF FIRST TIME RUNNING OR MISSING SOME REPOS 
 	run ./cloneAndBuildAll.sh
@@ -27,7 +27,7 @@ DON'T HAVE WINDOWS EXECUTABLE TO USE FOR virtualBox VM
     - IF ONLY WANT TO PULL AND BUILD MAIN 4 (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
       	run ./pullAndBuildMain4.sh
 
-#### List of Repos and Their Status
+### List of Repos and Their Status
 repo name followd by OS it successfully builds on with or without the vpn/tacc network 
 
 - tapis-client-java: linux, macOS with and without VPN
@@ -49,7 +49,7 @@ repo name followd by OS it successfully builds on with or without the vpn/tacc n
 - !!tapis-vault-java-driver: **FAILS** ON MISSING POM, USES GRADLE, **DEPRECATED**!! 
 - client-demo-java: linux, macOS ONLY WITH VPN CURRENTLY, **DEPRECATED**
 
-##### Current Hold-ups
+### Current Hold-ups
 Currently off the VPN the repos are building very slowly. I believe that this is happening because the dowloads from 
 c002.rodeo.tacc.utexas.edu are timing out and then retrying. In contrast when on the VPN if any timeout or interruption
 happens with c002.rodeo.tacc.utexas.edu it will wait to attempt again until a snapshot or release update is specifically
