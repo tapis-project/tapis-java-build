@@ -17,8 +17,8 @@ Windows:
 DON'T HAVE WINDOWS EXECUTABLE TO USE FOR virtualBox VM
 
 ### Running
-1.) clone this repo in same directory as other tapis repos
-2.) - IF FIRST TIME RUNNING OR MISSING SOME REPOS 
+1. clone this repo in same directory as other tapis repos
+2.  - IF FIRST TIME RUNNING OR MISSING SOME REPOS 
 	run ./cloneAndBuildAll.sh
     - IF MISSIING NO REPOS 
 	run ./pullAndBuildAll.sh
