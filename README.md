@@ -39,10 +39,10 @@ repo name followd by OS it successfully builds on with or without the vpn/tacc n
 - tapis-apps: linux, macOS with and without VPN
 - !!tapis-files: FAILS OFF VPN missing jar from oss.sonatype.org nexus repo manager!!
 - !!tapis-java: FAILS OFF VPN missing jar from oss.sonatype.org nexus repo manager!!
-- tapis-meta: linux, macOS ONLY WITH VPN CURRENTLY
-- notifications: linux, macOS ONLY WITH VPN CURRENTLY
+- tapis-meta: linux, macOS with and without VPN
+- notifications: linux, macOS with and without VPN
 - metav3-RH4-core: Is a docker image, no need to build
-- tapis-meta-security: linux, macOS 
+- !!tapis-meta-security: STILL WAITING TO HEAR BACK FROM JoeM ABOUT SECURITY ERROR!!
 - tapis-testapps: linux, macOS ONLY WITH VPN CURRENTLY
 - client-tests: SCHEDULED FOR REMOVAL, NO LONGER IN USE
 - tapis-shared-java-tst: linux, macOS ONLY WITH VPN CURRENTLY 
