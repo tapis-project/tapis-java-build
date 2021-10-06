@@ -3,12 +3,12 @@ Instructions for building all Tapis Java components
 
 ## Setup
 Linux:
-- need jdk 11 or later
+- need jdk 15 or later
 - need maven 
 - need docker cli
 
 macOS:
-- need jdk 11 or later
+- need jdk 15 or later
 - need maven
 - need docker desktop
 - need to change SED to gnuSED
@@ -18,7 +18,8 @@ DON'T HAVE WINDOWS EXECUTABLE TO USE FOR virtualBox VM
 
 ## Running
 1. clone this repo in same directory as other tapis repos
-2.  - IF FIRST TIME RUNNING OR MISSING SOME REPOS 
+2.NOTE: need to add option to each shell program so that users can state whether they want to run as a tacc developer or a tacc-external developer
+    - IF FIRST TIME RUNNING OR MISSING SOME REPOS 
 	run ./cloneAndBuildAll.sh
     - IF MISSIING NO REPOS 
 	run ./pullAndBuildAll.sh
@@ -36,21 +37,19 @@ repo name followd by OS it successfully builds on with or without the vpn/tacc n
 - tapis-systems: linux, macOS with and without VPN
 - tapis-cmd: linux, macOS with and without VPN
 - tapis-apps: linux, macOS with and without VPN
-- tapis-files: linux, macOS with and without VPN
-- !!tapis-java: linux, macOS ONLY WITH VPN CURRENTLY FAILS OFF VPN on securitylib!!
+- !!tapis-files: FAILS OFF VPN missing jar from oss.sonatype.org nexus repo manager!!
+- !!tapis-java: FAILS OFF VPN missing jar from oss.sonatype.org nexus repo manager!!
 - tapis-meta: linux, macOS ONLY WITH VPN CURRENTLY
 - notifications: linux, macOS ONLY WITH VPN CURRENTLY
-- !!metav3-RH4-core: **FAILS** WITH Source option 5 is no longer supported. Use 7 or later.!!
+- metav3-RH4-core: Is a docker image, no need to build
 - tapis-meta-security: linux, macOS 
 - tapis-testapps: linux, macOS ONLY WITH VPN CURRENTLY
-- !!client-tests: **FAILS** ON systemsClient cannot find symbol for missing classes, **DEPRECATED**!!
+- client-tests: SCHEDULED FOR REMOVAL, NO LONGER IN USE
 - tapis-shared-java-tst: linux, macOS ONLY WITH VPN CURRENTLY 
-- !!tapis-client-java-tst: **FAILS** ON Authenticator Client cannot find symbol for missing class, **DEPRECATED**!!
-- !!tapis-vault-java-driver: **FAILS** ON MISSING POM, USES GRADLE, **DEPRECATED**!! 
-- client-demo-java: linux, macOS ONLY WITH VPN CURRENTLY, **DEPRECATED**
+- tapis-client-java-tst: SCHEDULED FOR REMOVAL, NO LONGER IN USE
+- !!tapis-vault-java-driver: **FAILS** USES OLD VERSION OF GRADLE
+- client-demo-java: SCHEDULED FOR REMOVAL, NO LONGER IN USE
 
 ### Current Hold-ups
-Currently off the VPN the repos are building very slowly. I believe that this is happening because the dowloads from 
-c002.rodeo.tacc.utexas.edu are timing out and then retrying. In contrast when on the VPN if any timeout or interruption
-happens with c002.rodeo.tacc.utexas.edu it will wait to attempt again until a snapshot or release update is specifically
-stated. Both when on the vpn and off I can ping to c002.rodeo.tacc.utexas.edu but when off the VPN it takes on average twice as long.
+Now with the changed method of activating, the default profile repos are building at the desired speed and correctly as tested by tapis-cmd. Will need to go through built repos and check that parent pom
+is being inherited correctly. I am adding each edited pom to their own respective branch inside each repo named publicBuild. The only addition to the regular mvn clean install is now -DskipTaccProfile.

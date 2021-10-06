@@ -1,0 +1,7 @@
+tapis-java:
+	FAILS ON missing tapis-vault-java-driver from local and oss.sonatype (nexus repo manager)
+
+tapis-files:
+	Failed to execute goal on project tapis-files-lib: Could not resolve dependencies for project edu.utexas.tacc.tapis:tapis-files-lib:jar:1.0.0: Could not find artifact org.irods.jargon:jargon-core:jar:4.3.0.1-RELEASE in oss.sonatype.org-releases (https://oss.sonatype.org/content/repositories/releases/)
+
+ 

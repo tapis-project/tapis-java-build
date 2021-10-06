@@ -22,9 +22,12 @@ cd tapis-shared-java
 mvn clean install
 echo finished building tapis-shared-java
 
-echo building tapis-java
-cd ../
-git clone https://github.com/tapis-project/tapis-java.git
-cd tapis-java
-mvn clean install
-echo finished building tapis-java
+#====================================================================
+# Failing due to missing file in oss.sonatype.org
+#====================================================================
+#echo building tapis-java
+#cd ../
+#git clone https://github.com/tapis-project/tapis-java.git
+#cd tapis-java
+#mvn clean install
+#echo finished building tapis-java
