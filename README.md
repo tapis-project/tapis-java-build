@@ -13,20 +13,38 @@ macOS:
 - need docker desktop
 - need to change SED to gnuSED
 
-Windows:
-DON'T HAVE WINDOWS EXECUTABLE TO USE FOR virtualBox VM
+## macOS sed change instructions
+1. brew install gnu-sed
+2. brew info gnu-sed
+3. export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+4. now we can use gnu-sed as sed
+5. for more details here is the reference: https://medium.com/@bramblexu/install-gnu-sed-on-mac-os-and-set-it-as-default-7c17ef1b8f64
 
 ## Running
 1. clone this repo in same directory as other tapis repos
-2.NOTE: need to add option to each shell program so that users can state whether they want to run as a tacc developer or a tacc-external developer
-    - IF FIRST TIME RUNNING OR MISSING SOME REPOS 
+2.a) **FOR TACC DEVELOPERS ON VPN**
+    - **IF MISSING NO REPOS AND NEED NO UPDATE**
+        run ./buildAll.sh
+    - **IF FIRST TIME RUNNING OR MISSING SOME REPOS** 
 	run ./cloneAndBuildAll.sh
-    - IF MISSIING NO REPOS 
+    - **IF MISSIING NO REPOS BUT NEED TO UPDATE**
 	run ./pullAndBuildAll.sh
-    - IF ONLY WANT TO CLONE AND BUILD MAIN 4 (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
+    - **IF ONLY WANT TO CLONE AND BUILD MAIN 4** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
       	run ./cloneAndBuildMain4.sh
-    - IF ONLY WANT TO PULL AND BUILD MAIN 4 (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
+    - **IF ONLY WANT TO PULL AND BUILD MAIN 4** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
       	run ./pullAndBuildMain4.sh
+
+  b) **FOR PUBLIC DEVELOPERS**
+    - **IF MISSING NO REPOS AND NEED NO UPDATE**
+        run ./publicBuildAll.sh
+    - **IF FIRST TIME RUNNING OR MISSING SOME REPOS**
+        run ./publicCloneAndBuildAll.sh
+    - **IF MISSIING NO REPOS BUT NEED TO UPDATE**
+        run ./publicPullAndBuildAll.sh
+    - **IF ONLY WANT TO CLONE AND BUILD MAIN 4** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
+        run ./publicCloneAndBuildMain4.sh
+    - **IF ONLY WANT TO PULL AND BUILD MAIN 4** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
+        run ./publicPullAndBuildMain4.sh
 
 ### List of Repos and Their Status
 repo name followd by OS it successfully builds on with or without the vpn/tacc network 
@@ -43,13 +61,10 @@ repo name followd by OS it successfully builds on with or without the vpn/tacc n
 - notifications: linux, macOS with and without VPN
 - metav3-RH4-core: Is a docker image, no need to build
 - !!tapis-meta-security: STILL WAITING TO HEAR BACK FROM JoeM ABOUT SECURITY ERROR!!
-- tapis-testapps: linux, macOS ONLY WITH VPN CURRENTLY
+- tapis-testapps: linux, macOS with and without VPN
 - client-tests: SCHEDULED FOR REMOVAL, NO LONGER IN USE
-- tapis-shared-java-tst: linux, macOS ONLY WITH VPN CURRENTLY 
+- tapis-shared-java-tst: linux, macOS with and without VPN 
 - tapis-client-java-tst: SCHEDULED FOR REMOVAL, NO LONGER IN USE
-- !!tapis-vault-java-driver: **FAILS** USES OLD VERSION OF GRADLE
+- tapis-vault-java-driver: WILL ADD NOTE AND REQUIRE DEVELOPERS TO USE OLD VERSION OF GRADLE
 - client-demo-java: SCHEDULED FOR REMOVAL, NO LONGER IN USE
 
-### Current Hold-ups
-Now with the changed method of activating, the default profile repos are building at the desired speed and correctly as tested by tapis-cmd. Will need to go through built repos and check that parent pom
-is being inherited correctly. I am adding each edited pom to their own respective branch inside each repo named publicBuild. The only addition to the regular mvn clean install is now -DskipTaccProfile.
