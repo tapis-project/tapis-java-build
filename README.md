@@ -22,7 +22,7 @@ macOS:
 
 ## Running
 1. clone this repo in same directory as other tapis repos
-2.a) **FOR TACC DEVELOPERS ON VPN**
+2. **FOR TACC DEVELOPERS ON VPN**
     - **IF MISSING NO REPOS AND NEED NO UPDATE**
         run ./buildAll.sh
     - **IF FIRST TIME RUNNING OR MISSING SOME REPOS** 
@@ -34,7 +34,7 @@ macOS:
     - **IF ONLY WANT TO PULL AND BUILD MAIN 4** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
       	run ./pullAndBuildMain4.sh
 
-  b) **FOR PUBLIC DEVELOPERS**
+   **FOR PUBLIC DEVELOPERS**
     - **IF MISSING NO REPOS AND NEED NO UPDATE**
         run ./publicBuildAll.sh
     - **IF FIRST TIME RUNNING OR MISSING SOME REPOS**
