@@ -16,7 +16,7 @@ macOS:
 ## macOS sed change instructions
 1. brew install gnu-sed
 2. brew info gnu-sed
-3. export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+3. add this line to your ~/.bashrc for bash, or ~/.zshrc for zsh: export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 4. now we can use gnu-sed as sed
 5. for more details here is the reference: https://medium.com/@bramblexu/install-gnu-sed-on-mac-os-and-set-it-as-default-7c17ef1b8f64
 
