@@ -40,15 +40,12 @@ cd tapis-shared-java
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java
 
-#====================================================================
-# Failing due to missing file in oss.sonatype.org
-#====================================================================
-#echo cloning and building tapis-java
-#cd ../
-#git clone https://github.com/tapis-project/tapis-java.git
-#cd tapis-java
-#mvn clean install -DskipTaccProfile
-#echo finished building tapis-java
+echo cloning and building tapis-java
+cd ../
+git clone https://github.com/tapis-project/tapis-java.git
+cd tapis-java
+mvn clean install -DskipTaccProfile
+echo finished building tapis-java
 
 echo cloning and building tapis-systems
 cd ../
@@ -80,15 +77,12 @@ mvn clean install -DskipTaccProfile
 echo finished building tapis-apps
 
 
-#====================================================================
-# Failing due to missing file in oss.sonatype.org
-#====================================================================
-#echo cloning and building tapis-files
-#cd ../
-#git clone https://github.com/tapis-project/tapis-files.git
-#cd tapis-files
-#mvn clean install -DskipTaccProfile
-#echo finished building tapis-files
+echo cloning and building tapis-files
+cd ../
+git clone https://github.com/tapis-project/tapis-files.git
+cd tapis-files
+mvn clean install -DskipTaccProfile
+echo finished building tapis-files
 
 echo cloning and building tapis-meta
 cd ../
@@ -104,7 +98,6 @@ cd notifications
 mvn clean install -DskipTaccProfile
 echo finished building notifications
 
-#MOST LIKELY DEPRECATED
 echo cloning and building tapis-testapps
 cd ../
 git clone https://github.com/tapis-project/tapis-testapps.git
@@ -112,7 +105,6 @@ cd tapis-testapps
 mvn clean install -DskipTaccProfile
 echo finished building tapis-testapps
 
-#MOST LIKELY DEPRECATED
 echo cloning and building tapis-shared-java-tst
 cd ../
 git clone https://github.com/tapis-project/tapis-shared-java-tst.git
