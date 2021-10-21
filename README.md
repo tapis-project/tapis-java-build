@@ -24,13 +24,13 @@ For information on Tapis v3 refer to: https://tapis.readthedocs.io/en/latest/
 
 ## Setup for Linux
 - need jdk 15 or later
-- need maven 
+- need maven 3.5 or later
 - need docker cli
 
 ## Setup for macOS
 - need jdk 15 or later
-- need maven
-- need docker desktop
+- need maven 3.5 or later
+- need docker desktop and must have it running while building repositories
 - need to change SED to gnuSED
 
 ### macOS sed change instructions
@@ -40,25 +40,19 @@ For information on Tapis v3 refer to: https://tapis.readthedocs.io/en/latest/
 4. now we can use gnu-sed as sed
 5. for more details here is the reference: https://medium.com/@bramblexu/install-gnu-sed-on-mac-os-and-set-it-as-default-7c17ef1b8f64
 
-### List of Repos and Their Status
-repo name followd by OS it successfully builds on with or without the vpn/tacc network 
+### List of Repos and Their Purpose
 
-- tapis-client-java: linux, macOS with and without VPN
-- tapis-shared-java: linux, macOS with and without VPN
-- tapis-vaultbackup: linux, macOS with and without VPN
-- tapis-systems: linux, macOS with and without VPN
-- tapis-cmd: linux, macOS with and without VPN
-- tapis-apps: linux, macOS with and without VPN
-- tapis-files: linux, macOS with and without VPN 
-- !!tapis-java: FAILS OFF VPN missing tapis-vault-java-driver jar from oss.sonatype.org nexus repo manager!!
-- tapis-meta: linux, macOS with and without VPN
-- notifications: linux, macOS with and without VPN
-- metav3-RH4-core: Is a docker image, no need to build
-- tapis-meta-security: SCHEDULED FOR REMOVAL, NO LONGER IN USE
-- tapis-testapps: linux, macOS with and without VPN
-- client-tests: SCHEDULED FOR REMOVAL, NO LONGER IN USE
-- tapis-shared-java-tst: linux, macOS with and without VPN 
-- tapis-client-java-tst: SCHEDULED FOR REMOVAL, NO LONGER IN USE
-- tapis-vault-java-driver: WILL ADD NOTE AND REQUIRE DEVELOPERS TO USE OLD VERSION OF GRADLE
-- client-demo-java: SCHEDULED FOR REMOVAL, NO LONGER IN USE
-
+- tapis-client-java: Top level wrapper for all java client SDK's
+- tapis-shared-java: Shared libraries and api's for all java code other than tapis-client-java to prevent circular dependencies
+- tapis-vaultbackup: Backup program for Hashicorp Vault instances that use the raft backend storage. This utility program runs 
+                     as a daemon the host on which Vault runs and periodically takes a snapshot of the local raft storage.
+- tapis-systems: Tapis Systems service housing Systems api and Systems lib
+- tapis-cmd: Provides a convenient way for Tapis commands to be issued from within a Java IDE and from the command line.
+- tapis-apps: Tapis Applications service housing Apps api and Apps lib
+- tapis-files: Tapis Files api and backend
+- tapis-java: Tapis Jobs and Security api's and lib's
+- tapis-meta: Tapis Meta data service repository
+- notifications: Tapis Notifications system 
+- metav3-RH4-core: Docker image for the restheart base server
+- tapis-testapps: Test application used to exercise Tapis Jobs service
+- tapis-shared-java-tst: Test repo for tapis-shared-java code release flow 
