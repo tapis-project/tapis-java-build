@@ -1,4 +1,22 @@
 #!/bin/bash
+#=====================================================================
+# buildAll.sh 
+#
+# The purpose of this script is to build already cloned and up-to-date
+# tapis java-based repos. Will navigate to each individual java repo
+# and run a mvn clean install as well as a mvn package if applicable. 
+#
+# This script must be run from the top level of tapis-java-build
+# with tapis-java-build being in the same directory as all other
+# tapis repos
+#
+# tapis repos directory
+# \___
+#     |___ tapis-java-build
+#     |___ other tapis repos
+#
+#=====================================================================
+
 #navigating back to main tapis-project location on local machine
 cd ../
 

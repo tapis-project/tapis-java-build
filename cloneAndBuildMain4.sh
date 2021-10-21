@@ -1,4 +1,23 @@
 #!/bin/bash
+#=====================================================================
+# cloneAndBuildMain4.sh
+#
+# The purpose of this script is to clone and build the main four tapis
+# java-based repos. Will start in tapis repos directory at the 
+# top-level, then clone and build tapis-bom, tapis-client-java,
+# tapis-shared-java, and tapis-java in order. 
+#
+# This script must be run from the top level of tapis-java-build
+# with tapis-java-build being in the same directory as desired
+# location for the other tapis java-based repos.
+#
+# tapis repos directory
+# \___
+#     |___ tapis-java-build
+#     |___ other tapis repos
+#
+#=====================================================================
+
 #navigating back to main tapis-project location on local machine
 cd ../
 
