@@ -3,6 +3,7 @@ Instructions for building all Tapis Java components
 
 ## Introduction
 For information on Tapis v3 refer to: https://tapis.readthedocs.io/en/latest/
+For the tapis live docs refer to: https://tapis-project.github.io/live-docs/
 
 ## Running
 1. clone this repo in same directory as other tapis repos
@@ -20,16 +21,16 @@ For information on Tapis v3 refer to: https://tapis.readthedocs.io/en/latest/
 
 ## Java and Maven Requirements
 - need jdk 15 or later
-- need maven 3.5 or later 
+- need maven 3.6.3 or later 
 
 ## Setup for Linux
 - need jdk 15 or later
-- need maven 3.5 or later
+- need maven 3.6.3 or later
 - need docker cli
 
 ## Setup for macOS
 - need jdk 15 or later
-- need maven 3.5 or later
+- need maven 3.6.3 or later
 - need docker desktop and must have it running while building repositories
 - need to change SED to gnuSED
 
