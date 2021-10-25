@@ -2,8 +2,8 @@
 Instructions for building all Tapis Java components
 
 ## Introduction
-For information on Tapis v3 refer to: https://tapis.readthedocs.io/en/latest/
-For the tapis live docs refer to: https://tapis-project.github.io/live-docs/
+    - For information on Tapis v3 refer to: https://tapis.readthedocs.io/en/latest/
+    - For the tapis live docs refer to: https://tapis-project.github.io/live-docs/
 
 ## Running
 1. clone this repo in same directory as other tapis repos
