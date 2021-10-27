@@ -22,6 +22,7 @@ Instructions for building all Tapis Java components
 ## Java and Maven Requirements
 - need jdk 15 or later
 - need maven 3.6.3 or later 
+- NOTE: cannot use jdk 16 or 17 with maven 3.6.3
 
 ## Setup for Linux
 - need jdk 15 or later
