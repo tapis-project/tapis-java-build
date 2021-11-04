@@ -24,28 +24,24 @@ cd ../
 
 echo pulling and building tapis-bom
 cd tapis-bom 
-git checkout publicBuild
 git pull
 mvn clean install -DskipTaccProfile
 echo finished building tapis-bom
 
 echo pulling and building tapis-client-java
 cd ../tapis-client-java
-git checkout publicBuild
 git pull
 mvn clean install -DskipTaccProfile
 echo finished building tapis-client-java
 
 echo pulling and building tapis-shared-java
 cd ../tapis-shared-java
-git checkout publicBuild
 git pull
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java
 
 echo pulling and building tapis-shared-java
 cd ../tapis-java
-git checkout publicBuild
 git pull
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java

@@ -24,7 +24,6 @@ cd ../
 echo building tapis-bom
 git clone https://github.com/tapis-project/tapis-bom.git
 cd tapis-bom
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-bom
 
@@ -32,7 +31,6 @@ echo building tapis-client-java
 cd ../
 git clone https://github.com/tapis-project/tapis-client-java.git
 cd tapis-client-java
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-client-java
 
@@ -40,7 +38,6 @@ echo building tapis-shared-java
 cd ../
 git clone https://github.com/tapis-project/tapis-shared-java.git
 cd tapis-shared-java
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java
 
@@ -48,6 +45,5 @@ echo building tapis-java
 cd ../
 git clone https://github.com/tapis-project/tapis-java.git
 cd tapis-java
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-java

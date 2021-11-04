@@ -22,68 +22,57 @@ cd ../
 
 echo building tapis-bom
 cd tapis-bom 
-git checkout publicBuild
-mvn clean installi -DskipTaccProfile
+mvn clean install -DskipTaccProfile
 echo finished building tapis-bom
 
 echo building tapis-client-java
 cd ../tapis-client-java
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-client-java
 
 echo building tapis-shared-java
 cd ../tapis-shared-java
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java
 
 echo building tapis-java
 cd ../tapis-java
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-java
 
 echo building tapis-apps
 cd ../tapis-apps
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-apps
 
 echo building tapis-systems
 cd ../tapis-systems
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-systems
 
 echo building tapis-files
 cd ../tapis-files
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-files
 
 echo building tapis-meta
 cd ../tapis-meta
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo building tapis-meta
 
 echo building tapis-cmd
 cd ../tapis-cmd
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
-mvn -f shaded-pom.xml -DskipTaccProfile
+mvn -f shaded-pom.xml package -DskipTaccProfile
 echo finished building tapis-cmd
 
 echo building notifications
 cd ../notifications
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building notifications
 
 echo building tapis-testapps
 cd ../tapis-testapps
-git checkout publicBuild
 mvn clean install -DskipTaccProfile
 echo finished building tapis-testapps
 
