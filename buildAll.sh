@@ -67,7 +67,7 @@ mvn -f shaded-pom.xml package -DskipTaccProfile
 echo finished building tapis-cmd
 
 echo building notifications
-cd ../notifications
+cd ../tapis-notifications
 mvn clean install -DskipTaccProfile
 echo finished building notifications
 

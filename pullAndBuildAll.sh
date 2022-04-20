@@ -77,7 +77,7 @@ mvn clean install -DskipTaccProfile
 echo finished building tapis-cmd
 
 echo pulling and building notifications
-cd ../notifications
+cd ../tapis-notifications
 git pull
 mvn clean install -DskipTaccProfile
 echo finished building notifications

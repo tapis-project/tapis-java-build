@@ -20,17 +20,16 @@ Instructions for building all Tapis Java components
         run ./pullAndBuildMain4.sh
 
 ## Java and Maven Requirements
-- need jdk 15 or later
+- need jdk 17.2 or later
 - need maven 3.6.3 or later 
-- NOTE: cannot use jdk 16 or 17 with maven 3.6.3
 
 ## Setup for Linux
-- need jdk 15 or later
+- need jdk 17.2 or later
 - need maven 3.6.3 or later
 - need docker cli
 
 ## Setup for macOS
-- need jdk 15 or later
+- need jdk 17.2 or later
 - need maven 3.6.3 or later
 - need docker desktop and must have it running while building repositories
 - need to change SED to gnuSED

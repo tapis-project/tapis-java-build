@@ -93,8 +93,8 @@ echo finished building tapis-meta
 
 echo cloning and building notifications
 cd ../
-git clone https://github.com/tapis-project/notifications.git
-cd notifications
+git clone https://github.com/tapis-project/tapis-notifications.git
+cd tapis-notifications
 mvn clean install -DskipTaccProfile
 echo finished building notifications
 
