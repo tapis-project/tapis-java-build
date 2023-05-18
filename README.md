@@ -14,10 +14,10 @@ Instructions for building all Tapis Java components
         run ./cloneAndBuildAll.sh
     - **IF MISSIING NO REPOS BUT NEED TO UPDATE**
         run ./pullAndBuildAll.sh
-    - **IF ONLY WANT TO CLONE AND BUILD MAIN 4** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
-        run ./cloneAndBuildMain4.sh
-    - **IF ONLY WANT TO PULL AND BUILD MAIN 4** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-java)
-        run ./pullAndBuildMain4.sh
+    - **IF ONLY WANT TO CLONE AND BUILD MAIN 5** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-security, tapis-jobs)
+        run ./cloneAndBuildMain5.sh
+    - **IF ONLY WANT TO PULL AND BUILD MAIN 5** (tapis-bom, tapis-client-java, tapis-shared-java, tapis-security, tapis-jobs)
+        run ./pullAndBuildMain5.sh
 
 ## Java and Maven Requirements
 - need jdk 17.2 or later
@@ -51,9 +51,10 @@ Instructions for building all Tapis Java components
 - tapis-cmd: Provides a convenient way for Tapis commands to be issued from within a Java IDE and from the command line.
 - tapis-apps: Tapis Applications service housing Apps api and Apps lib
 - tapis-files: Tapis Files api and backend
-- tapis-java: Tapis Jobs and Security api's and lib's
+- tapis-jobs: Tapis Jobs api's and lib's
 - tapis-meta: Tapis Meta data service repository
-- notifications: Tapis Notifications system 
+- tapis-notifications: Tapis Notifications system 
+- tapis-security: Tapis Security Kernel api's and lib's
 - metav3-RH4-core: Docker image for the restheart base server
 - tapis-testapps: Test application used to exercise Tapis Jobs service
 - tapis-shared-java-tst: Test repo for tapis-shared-java code release flow 

@@ -40,11 +40,17 @@ git pull
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java
 
-echo pulling and building tapis-java
-cd ../tapis-java
+echo pulling and building tapis-security
+cd ../tapis-security
 git pull
 mvn clean install -DskipTaccProfile
-echo finished building tapis-java
+echo finished building tapis-security
+
+echo pulling and building tapis-jobs
+cd ../tapis-jobs
+git pull
+mvn clean install -DskipTaccProfile
+echo finished building tapis-jobs
 
 echo pulling and building tapis-apps
 cd ../tapis-apps
@@ -76,11 +82,11 @@ git pull
 mvn clean install -DskipTaccProfile
 echo finished building tapis-cmd
 
-echo pulling and building notifications
+echo pulling and building tapis-notifications
 cd ../tapis-notifications
 git pull
 mvn clean install -DskipTaccProfile
-echo finished building notifications
+echo finished building tapis-notifications
 
 echo pulling and building tapis-testapps
 cd ../tapis-testapps

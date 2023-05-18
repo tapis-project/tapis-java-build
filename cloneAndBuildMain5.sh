@@ -41,9 +41,16 @@ cd tapis-shared-java
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java
 
-echo building tapis-java
+echo building tapis-security
 cd ../
-git clone https://github.com/tapis-project/tapis-java.git
-cd tapis-java
+git clone https://github.com/tapis-project/tapis-security.git
+cd tapis-security
 mvn clean install -DskipTaccProfile
-echo finished building tapis-java
+echo finished building tapis-security
+
+echo building tapis-jobs
+cd ../
+git clone https://github.com/tapis-project/tapis-jobs.git
+cd tapis-jobs
+mvn clean install -DskipTaccProfile
+echo finished building tapis-jobs

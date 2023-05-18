@@ -40,12 +40,19 @@ cd tapis-shared-java
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java
 
-echo cloning and building tapis-java
+echo cloning and building tapis-security
 cd ../
-git clone https://github.com/tapis-project/tapis-java.git
-cd tapis-java
+git clone https://github.com/tapis-project/tapis-security.git
+cd tapis-security
 mvn clean install -DskipTaccProfile
-echo finished building tapis-java
+echo finished building tapis-security
+
+echo cloning and building tapis-jobs
+cd ../
+git clone https://github.com/tapis-project/tapis-jobs.git
+cd tapis-jobs
+mvn clean install -DskipTaccProfile
+echo finished building tapis-jobs
 
 echo cloning and building tapis-systems
 cd ../
@@ -91,12 +98,12 @@ cd tapis-meta
 mvn clean install -DskipTaccProfile
 echo finished building tapis-meta
 
-echo cloning and building notifications
+echo cloning and building tapis-notifications
 cd ../
 git clone https://github.com/tapis-project/tapis-notifications.git
 cd tapis-notifications
 mvn clean install -DskipTaccProfile
-echo finished building notifications
+echo finished building tapis-notifications
 
 echo cloning and building tapis-testapps
 cd ../

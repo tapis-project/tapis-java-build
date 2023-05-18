@@ -35,10 +35,15 @@ cd ../tapis-shared-java
 mvn clean install -DskipTaccProfile
 echo finished building tapis-shared-java
 
-echo building tapis-java
-cd ../tapis-java
+echo building tapis-security
+cd ../tapis-security
 mvn clean install -DskipTaccProfile
-echo finished building tapis-java
+echo finished building tapis-security
+
+echo building tapis-jobs
+cd ../tapis-jobs
+mvn clean install -DskipTaccProfile
+echo finished building tapis-jobs
 
 echo building tapis-apps
 cd ../tapis-apps
@@ -66,10 +71,10 @@ mvn clean install -DskipTaccProfile
 mvn -f shaded-pom.xml package -DskipTaccProfile
 echo finished building tapis-cmd
 
-echo building notifications
+echo building tapis-notifications
 cd ../tapis-notifications
 mvn clean install -DskipTaccProfile
-echo finished building notifications
+echo finished building tapis-notifications
 
 echo building tapis-testapps
 cd ../tapis-testapps
